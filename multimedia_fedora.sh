@@ -15,10 +15,10 @@ echo "Preparing repos..."
 echo "*********************************"
 sleep 1
 
-releasever=$(cat /etc/fedora-release | cut -f3 -d ' ')
+RELVER=$(cat /etc/fedora-release | cut -f3 -d ' ')
 
-rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$releasever.noarch.rpm
-rpm -ivh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$releasever.noarch.rpm
+rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$RELVER.noarch.rpm
+rpm -ivh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$RELVER.noarch.rpm
 
 
 echo "*********************************"
@@ -36,7 +36,7 @@ echo "Google Chrome ..."
 echo "*********************************"
 sleep 1
 
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 rpm -ivh google-chrome-stable_current_x86_64.rpm
 
 
