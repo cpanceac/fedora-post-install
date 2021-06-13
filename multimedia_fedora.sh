@@ -36,7 +36,7 @@ echo "Google Chrome ..."
 echo "*********************************"
 sleep 1
 
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 rpm -ivh google-chrome-stable_current_x86_64.rpm
 
 
