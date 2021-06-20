@@ -53,7 +53,14 @@ echo "*********************************"
 echo "Installing things ..."
 echo "*********************************"
 
-yum -y install qmmp{,-plugin-pack-freeworld} gstreamer1-plugins-{ugly,bad-freeworld} gstreamer1-libav mplayer{,-gui} mpv mencoder  google-chrome-stable p7zip arj unrar unace mc ffmpeg hexchat vlc
+yum -y install \
+  qmmp{,-plugin-pack-freeworld} \
+  gstreamer1-plugins-{ugly,bad-freeworld} \
+  gstreamer1-libav mplayer{,-gui} \
+  mpv mencoder vlc ffmpeg \
+  google-chrome-stable \
+  p7zip arj unrar unace \
+  mc hexchat cockpit-pcp
 
 
 echo "*****************************************"
