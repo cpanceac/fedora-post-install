@@ -46,21 +46,22 @@ echo "*********************************"
 sleep 1
 
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-rpm -ivh google-chrome-stable_current_x86_64.rpm
+dnf -y install ./google-chrome-stable_current_x86_64.rpm
 
 
 echo "*********************************"
 echo "Installing things ..."
 echo "*********************************"
 
-yum -y install \
-  qmmp{,-plugin-pack-freeworld} \
-  gstreamer1-plugins-{ugly,bad-freeworld} \
-  gstreamer1-libav mplayer{,-gui} \
-  mpv mencoder vlc ffmpeg \
-  google-chrome-stable \
-  p7zip arj unrar unace \
-  mc hexchat cockpit-pcp
+A=(qmmp{,-plugin-pack-freeworld}
+  gstreamer1-plugins-{ugly,bad-freeworld}
+  gstreamer1-libav mplayer{,-gui}
+  mpv mencoder vlc ffmpeg
+  google-chrome-stable
+  p7zip arj unrar unace
+  mc hexchat cockpit-pcp)
+  
+dnf -y install ${A[@]}
 
 
 echo "*****************************************"
